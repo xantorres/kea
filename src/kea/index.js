@@ -355,6 +355,8 @@ export function kea (_input) {
               selectors[selectorKey] = createSelector(...args, s[1])
             })
 
+            plugins.afterCreateSingleton.forEach(f => f(input, output))
+
             // store in the cache
             setCache(joinedPath, {
               reduxMounted,
