@@ -33,7 +33,8 @@
     "test": "jest",
     "lint": "eslint src/**",
     "prepublish": "npm run build",
-    "postinstall": "opencollective postinstall"
+    "postinstall": "opencollective postinstall",
+    "prepare": "npm run build"
   },
   "files": [
     "es",
